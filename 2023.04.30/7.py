@@ -30,22 +30,24 @@ list_of = [
         'Ульяновск': 4
     },
 ]
-
 list_out = {}
 
 for i in list_of:
-
     for k, v in i.items():
-
         if k in list_out:
             list_out[k] = list_out[k] | {v}
-
         else:
             list_out[k] = {v}
 
-print(*{f'{repr(k)}: {v}'
-      for k, v in list_out.items()}, sep=',\n')
-      
+print(
+    *{
+        f'{repr(k)}: {v}'
+        for k, v in list_out.items()
+    },
+    sep=',\n'
+)
+
+
 # 'Ульяновск': {4, 7},
 # 'Хабаровск': {7},
 # 'Тольятти': {9},
@@ -63,3 +65,5 @@ print(*{f'{repr(k)}: {v}'
 # 'Самара': {2},
 # 'Москва': {1},
 # 'Пермь': {9, 3}
+
+

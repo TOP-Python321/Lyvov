@@ -1,25 +1,21 @@
 case = {}
 
 while True:
-
     inp = input('Введите число через пробел: ')
     if not inp:
         break
-    
     list_inp = inp.split()
     case[list_inp[0]] = list_inp[1]
-    
-inp_value = input('Введите значение из словаря: ')
 
+inp_value = input('Введите значение из словаря: ')
 for k, v in case.items():
-    
     if v == inp_value:
         print(k)
         break
-
 else:
-    print('! value error !')   
-    
+    print('! value error !')
+
+
 # Введите число через пробел: 789 Брус
 # Введите число через пробел: 689 Рейка
 # Введите число через пробел: 569 Шифер
@@ -35,3 +31,5 @@ else:
 # Введите число через пробел:
 # Введите значение из словаря: Гвоздь
 # ! value error !
+
+

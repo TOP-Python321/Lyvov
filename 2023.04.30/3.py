@@ -8,14 +8,13 @@ if not list_2:
     print_out = 'Да'
 else:
     for i in range(len(list_1)):
-
         for k in list_1:
-
-            if list_1[i] == k and list_2 == list_1[i:i + len(list_2)]:
+            if list_1[i] == k and list_2 == list_1[i:i+len(list_2)]:
                 print_out = 'Да'
                 break
 
 print(print_out)
+
 
 # Введите числа через пробел: 5 6 7 8
 # Введите числа через пробел: 7 8
@@ -23,3 +22,5 @@ print(print_out)
 # Введите числа через пробел: 5 6 7 8
 # Введите числа через пробел: 5 8
 # Нет
+
+
