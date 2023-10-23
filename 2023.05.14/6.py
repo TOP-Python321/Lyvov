@@ -1,11 +1,12 @@
 def orth_triangle(*, cathetus1: float = 0, cathetus2: float = 0, hypotenuse: float = 0) -> float | None:
-    
     """Возвращает длину третьей стороны прямоугольного треугольника по двум переданным сторонам или None, если вычисление невозможно"""
-    
     if cathetus1 and cathetus2 and hypotenuse:
         return None
-        
+
+    # ДОБАВИТЬ: проверку на передачу в качестве аргументов отрицательных чисел
+
     if cathetus1 and cathetus2:
+        # ИСПРАВИТЬ: лишняя пара скобок, и лишнее округление
         return round(((cathetus1 ** 2 + cathetus2 ** 2) ** 0.5), 2)
         
     if cathetus1 and hypotenuse and cathetus1 < hypotenuse:
@@ -21,3 +22,6 @@ print(orth_triangle(cathetus1=8, cathetus2=15))
 # 17.0
 print(orth_triangle(cathetus2=9, hypotenuse=3))
 # None
+
+
+# ИТОГ: хорошо — 3/4
